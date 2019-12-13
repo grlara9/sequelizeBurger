@@ -13,6 +13,9 @@ module.exports = function(sequelize, DataTypes){
         devoured:{
             type: DataTypes.BOOLEAN
         }
-    });
+    }
+    );
+    createdAt: false
+    updatedAt: false
     return Burgers;
 }
