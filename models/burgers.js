@@ -7,15 +7,15 @@ module.exports = function(sequelize, DataTypes){
             primaryKey: true
         },
         burger_name: {
-            type: DataTypes.STRING,
-            allowNull: false
+            type: DataTypes.STRING
         },
         devoured:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
         }
-    }
-    );
-    createdAt: false
-    updatedAt: false
+    },{
+        timestamps: false
+    })
+    
     return Burgers;
 }

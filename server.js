@@ -14,10 +14,11 @@ app.use(bodyParser.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+//burger routes
 var routes = require("./controllers/burgers_controller.js");
-app.use(routes)
+app.use("/", routes)
 
-db.sequelize.sync({force: true}).then(function() { 
+db.sequelize.sync().then(function() { 
 app.listen(PORT, function(){
     console.log("We are using PORT" + PORT);
 })

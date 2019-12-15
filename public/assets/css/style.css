@@ -1,0 +1,22 @@
+.jumbotron{
+    background-color:  #8c8c8c;
+}
+
+#header-mid{
+    text-align: center;
+    font-family: 'Lilita One', cursive;
+}
+#color-override{
+    font-family: 'Lilita One', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+#lefthead{
+    background-color: #00802b;
+    font-family: 'Lilita One', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+#righthead{
+    background-color: #ff3333;
+    font-family: 'Lilita One', cursive;
+    font-family: 'Poppins', sans-serif;
+}
