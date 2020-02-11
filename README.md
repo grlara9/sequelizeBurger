@@ -10,12 +10,13 @@ The app will store every burger in a database, whether devoured or not.
 
 ## Technologies used ##
 
-Markup: *Node js
-*Express js
-*BootStrap
-*Handlebars
-*MySQL
-*Sequelize
+Markup : 
+* Node js
+* Express js
+* BootStrap
+* Handlebars
+* MySQL
+* Sequelize
 
 ## Author ## 
 Guillermo Lara
