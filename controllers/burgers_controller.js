@@ -1,6 +1,8 @@
 var express = require("express")
 var router = express.Router()
-var db = require("../models")
+var db = require("../models/")
+
+
 
 router.get("/", (req,res) =>{
     res.redirect("/burgers")
@@ -18,11 +20,15 @@ router.get("/burgers", (req, res) => {
 
 
 router.post("/burgers/create", (req, res)=>{
+    
     db.Burgers.create({
+
         burger_name: req.body.burger
         
     })
-    .then(burger => {console.log(burger)
+    .then(burger => {
+        console.log(burger)
+
     res.redirect("/");
     })
     .catch(err=> console.log(err))
