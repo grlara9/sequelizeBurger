@@ -8,7 +8,7 @@ $(document).ready(function() {
         method: "PUT",
         url: "/burgers/update/" + burger_id
       }).then(function(data) {
-        console.log(data)
+        console.log("esto salio alv" + data)
         // reload page to display devoured burger in proper column
         location.reload();
       });

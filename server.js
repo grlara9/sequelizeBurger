@@ -11,6 +11,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
+app.use(methodOverride("_method"));
 
 app.use(methodOverride('_method'))
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -20,6 +21,7 @@ app.set("view engine", "handlebars");
 
 //burger routes
 var routes = require("./controllers/burgers_controller.js");
+
 app.use(routes)
 
 db.sequelize.sync().then(function() { 

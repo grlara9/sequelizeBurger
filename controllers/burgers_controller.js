@@ -34,18 +34,18 @@ router.post("/burgers/create", (req, res)=>{
     .catch(err=> console.log(err))
 })
 
-router.put("burgers/update/:id", (req, res) =>{
+router.put("/", (req, res) =>{
     db.Burgers.update({
         devoured: true
     },
-    {
+    { 
     where: {
-        id: req.params.id
+        id: req.body.id
     }
 }
-).then(burger_put => {
-    console.log(burger_put)
-    res.json("/")
+).then(function(data) {
+    console.log(data)
+    res.redirect("/")
 })
 })
 module.exports = router

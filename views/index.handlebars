@@ -28,23 +28,18 @@
             <div class="panel panel-default">
                 <div class="panel-heading " id="lefthead">New Burgers</div>
                     <div class="panel-body">
-                        <ul>
-                            {{#each burger}}
-                            {{#unless this.devoured}}
+                        {{#each burger}}
+                        {{#unless this.devoured}}
                             <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-
-                            <form class="button-size devour-form">
-						    <input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
-						    <button type="submit" class="btn btn-danger">Devourit</button>
-					        </form>
-
-
-                           
-                           <hr>
-                            {{/unless}}
-                            {{/each}}
-                        </ul>
-                    </div>
+                                <form class="inline-form" action="/?_method=PUT" method="POST">
+                                <div class="form-group">
+                                <input type="hidden" name="id" type="text" value="{{this.id}}"/>
+                                <button class="btn btn-danger" type="submit">Devour it!</button>
+                                </div>
+                            </form>
+                        {{/unless}}
+                        {{/each}}
+                    </div> 
                 </div>
             </div>
         <!-- Devoured Burgers -->
@@ -55,7 +50,7 @@
                     <ul>
                         {{#each burger}}
                             {{#if this.devoured}}
-                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span><br>
                             {{/if}}
                         {{/each}}
                     </ul>
