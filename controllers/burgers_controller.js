@@ -36,7 +36,7 @@ router.post("/burgers/create", (req, res)=>{
 
 router.put("/", (req, res) =>{
     db.Burgers.update({
-        devoured: true
+        devoured: 1
     },
     { 
     where: {

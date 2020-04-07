@@ -1,10 +1,14 @@
 body{
-    background-color: #222;
+    background-image: url('../images/burger.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     color: white;
 }
 
 .jumbotron{
     background-color:  #375a7f;
+    opacity: 0.9;
 }
 
 #header-mid{
