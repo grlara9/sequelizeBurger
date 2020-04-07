@@ -36,7 +36,7 @@ router.post("/burgers/create", (req, res)=>{
 
 router.put("/", (req, res) =>{
     db.Burgers.update({
-        devoured: 1
+        devoured: true
     },
     { 
     where: {
@@ -48,4 +48,16 @@ router.put("/", (req, res) =>{
     res.redirect("/")
 })
 })
+
+router.delete("/:id", (req, res) => {
+    db.Post.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function(data) {
+        res.json(data);
+      });
+  });
+
 module.exports = router
