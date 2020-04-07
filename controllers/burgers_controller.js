@@ -49,13 +49,14 @@ router.put("/", (req, res) =>{
 })
 })
 
-router.delete("/:id", (req, res) => {
-    db.Post.destroy({
+router.delete("/", (req, res) => {
+    db.Burgers.destroy({
       where: {
-        id: req.params.id
+        id: req.body.id
       }
     })
       .then(function(data) {
+          console.log(data)
         res.json(data);
       });
   });

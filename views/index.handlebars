@@ -51,6 +51,12 @@
                         {{#each burger}}
                             {{#if this.devoured}}
                                 <span><strong> {{this.id}} - {{this.burger_name}} </strong></span><br>
+                                    <form class="inline-form" action="/?_method=DELETE" method="POST">
+                                    <div class="form-group">
+                                        <input type="hidden" name="id" type="text" value="{{this.id}}"/>
+                                        <button class="btn btn-danger" type="submit">Delete</button>
+                                    </div>
+                                </form>
                             {{/if}}
                         {{/each}}
                     </ul>
