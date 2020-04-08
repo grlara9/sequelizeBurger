@@ -4,8 +4,11 @@ body{
     background-attachment: fixed;
     background-position: center;
     color: white;
+    font-size: 24px;
 }
-
+h1{
+    font-size: 50px;
+}
 .jumbotron{
     background-color: #FF8C00;
     opacity: 0.9;
