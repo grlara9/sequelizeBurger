@@ -8,7 +8,7 @@ Whenever a user submits a burger's name, the app will display the burger on the 
 -Each burger in the waiting area also has a Devour it! button. When the user clicks it, the burger will move to -the right side of the page.
 The app will store every burger in a database, whether devoured or not.
 
-![Burger](public/images/bur.png)
+![Burger](public/assets/images/bur.png)
 
 ## Deploy Project
 [Click link to deploy project](https://fast-woodland-65175.herokuapp.com/)
